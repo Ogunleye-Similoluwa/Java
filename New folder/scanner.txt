@@ -1,0 +1,5 @@
+instance variables, set Methods  and get Methods
+.
+
+each class you create become a new type that can be used that can be used to declare a variable and create 	objects .
+urine ikeoda = new urine;
