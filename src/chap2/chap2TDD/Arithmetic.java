@@ -1,6 +1,6 @@
 package chap2.chap2TDD;
 
-public class ArithmeticClass {
+public class Arithmetic {
     public int firstSquare(int num1) {
         return num1 * num1;
     }
