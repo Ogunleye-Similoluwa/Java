@@ -1,6 +1,6 @@
 package chap2.chap2TDD;
 
-public class Arithmetic {
+public class ArithmeticClass {
     public int firstSquare(int num1) {
         return num1 * num1;
     }
@@ -10,13 +10,13 @@ public class Arithmetic {
     }
 
     public int addSquares(int num1, int num2) {
-        int result =0;
-         result = (num1 * num1) + (num2 * num2);
+        int result ;
+        result =  (num1 * num1) + (num2 * num2);
         return result;
     }
 
     public int subtractSquares(int num1, int num2) {
-        int result =0;
+        int result ;
         result = (num1 * num1) - (num2 * num2);
         return Math.absExact(result);
     }
