@@ -10,8 +10,10 @@ public class SumOfArray {
         System.out.println("The sum of the values is : " +sum);
     }
 }
+// pseudocode
 // Declare and initialize array variable
 // Assign a value to variable sum
 // use for loop to iterate the values
 // Sum the array index values
 // print the result of the sum
+
