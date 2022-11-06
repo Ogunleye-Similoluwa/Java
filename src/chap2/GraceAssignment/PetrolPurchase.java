@@ -1,3 +1,5 @@
+package chap2.GraceAssignment;
+
 public class PetrolPurchase {
 	private String location;
 	private String petrolType;
@@ -66,3 +68,4 @@ public class PetrolPurchase {
 
 
 }
+

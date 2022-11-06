@@ -1,4 +1,4 @@
-package Chap6;
+package chap2.GraceAssignment;
 
 import java.security.SecureRandom;
 
@@ -45,3 +45,5 @@ public class Craps {
         return point;
     }
 }
+
+

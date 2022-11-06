@@ -1,4 +1,6 @@
+/*
 package chap2.chap2TDD;
+
 
 public class ComparingIntegers {
 
@@ -44,5 +46,7 @@ public class ComparingIntegers {
         return square < 100;
     }
 }
+
+ */
 
 

@@ -1,4 +1,4 @@
-package chap2.chap2TDD;
+/*package chap2.chap2TDD;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -64,6 +64,8 @@ public class ComparingIntegersTest {
 
 
     }
+
+ */
 
 
 

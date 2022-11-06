@@ -1,6 +1,6 @@
-package graceAssignment;
+package chap2.GraceAssignment;
 
-import java.time.LocalDateTime;
+
 import java.util.Scanner;
 
 public class Nokia3310 {

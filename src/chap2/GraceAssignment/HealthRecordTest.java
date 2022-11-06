@@ -1,4 +1,4 @@
-package Chap3;
+package chap2.GraceAssignment;
 /*(Computerization of Health Records) A health-care issue that has been in the news lately is
         the computerization of health records. This possibility is being approached cautiously because of
         sensitive privacy and security concerns, among others. [We address such concerns in later exercises.]
@@ -17,7 +17,7 @@ class HealthProfile for that person and prints the information from that object�
 , last name, gender, date of birth, height and weight—then calculates and prints the
 
         person’s age in years, BMI, maximum heart rate and target-heart-rate range. It should also display
-        the BMI values chart from Exercise 2.33**/
+        the BMI values chart from Exercise 2.33*/
 
 import java.util.Scanner;
 
@@ -83,3 +83,5 @@ public class HealthRecordTest {
 
     }
 }
+
+

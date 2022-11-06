@@ -1,4 +1,4 @@
-package Chap6;
+package chap2.GraceAssignment;
 /* You roll two dice. Each die has six faces, which contain one, two, three, four, five and
 six spots, respectively. After the dice have come to rest, the sum of the spots on the two
 upward faces is calculated. If the sum is 7 or 11 on the first throw, you win. If the sum
@@ -11,7 +11,7 @@ point value). You lose by rolling a 7 before making your point.*/
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class gameOfCraps {
+public class gameOfCraps2 {
     static Scanner in = new Scanner(System.in);
     private static final SecureRandom randomNumbers = new SecureRandom();
 
@@ -69,3 +69,4 @@ public class gameOfCraps {
         return sum;
     }
 }
+

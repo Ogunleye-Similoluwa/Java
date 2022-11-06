@@ -1,4 +1,4 @@
-package Chap3;
+package chap2.GraceAssignment;
 /*(Computerization of Health Records) A health-care issue that has been in the news lately is
         the computerization of health records. This possibility is being approached cautiously because of
         sensitive privacy and security concerns, among others. [We address such concerns in later exercises.]
@@ -18,11 +18,11 @@ class HealthProfile for that person and prints the information from that object�
         BMI weightInPounds × 703
 heightInInches heightInInches × = ------------------------------------------------------------------------------------
 BMI weightInKi rams log
-heightInMeters heightInMeters
- */
+heightInMeters heightInMeters*/
+
 
 import java.time.LocalDate;
-import java.util.Objects;
+
 
 public class HealthRecord {
 
@@ -75,15 +75,15 @@ public class HealthRecord {
 
         public void dayOfBirth( int day){
 
-            if (day >= 0){
+            if (day >= 0 ||day <= 31 ){
+                this.day = day;
             }
-            else if (day <= 31){
-            }
+
             else {
                 System.out.println("Invalid day");
             }
 
-            this.day = day;
+
         }
         public int getDayOfBirth(){
             return day;
@@ -94,7 +94,10 @@ public class HealthRecord {
             if (month < 1 || month > 12){
                 System.out.println("invalid month");
             }
-            this.month = month;
+            else {
+                this.month = month;
+            }
+
             }
 
 
@@ -103,13 +106,10 @@ public class HealthRecord {
 
 
         public int getMonthOfBirth(){
-
             return month;
         }
 
         public void yearOfBirth( int year){
-
-
             this.year = year;
 
         }
@@ -168,5 +168,7 @@ public class HealthRecord {
         return gender;
     }
 }
+
+
 
 

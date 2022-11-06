@@ -1,4 +1,4 @@
-package chap2;
+package chap2.chap2;
 
 public class shapesWithAsterisks {
     public static void main(String[] args) {
@@ -13,3 +13,5 @@ public class shapesWithAsterisks {
                 """);
     }
 }
+
+

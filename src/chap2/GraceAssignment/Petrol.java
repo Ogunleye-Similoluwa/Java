@@ -1,4 +1,4 @@
-
+package chap2.GraceAssignment;
 
 public class Petrol {
 
@@ -26,3 +26,4 @@ PetrolPurchase purchase1 = new PetrolPurchase("Lekki", "Kerosene", 3, 210.15, 5)
 	}
 
 }
+

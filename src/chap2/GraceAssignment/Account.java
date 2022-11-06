@@ -1,22 +1,25 @@
+package chap2.GraceAssignment;
+
 public class Account {
 	public String name ;
 	public double balance;
 
-	public Account(String name, double balance){
-   
-		this.name = name;
+	public Account(String name, double balance) {
+
+        this.name = name;
+
+        if (balance > 0.00){
+            this.balance = balance;
+        }
+    }
 	
-		if (balance > 0.00){
-		this.balance = balance;
-	}  
-	
-	public void withdraw(double withdraw){
-   		if( withdraw <= balance ) {
-  		balance = balance - withdraw;
-	}
-		else{
-   	 System.out.println("withdraw amount exceeded account balance");
-	}
+	public void withdrawMoney(double withdraw) {
+        if (withdraw <= balance) {
+            balance = balance - withdraw;
+        } else {
+            System.out.println("withdraw amount exceeded account balance");
+        }
+    }
 	public double getPrice(){
     		return balance;
 	}
@@ -26,10 +29,11 @@ public class Account {
 		this.name = name;
 	}
 
-	public String getname(){
+	public String getName(){
 		return name;
 	}
  
- } 
+ }
+
  
  
