@@ -23,7 +23,7 @@ class AccountTest {
         amirahTeensAccount.getBalance();
         assertEquals(3000, amirahTeensAccount.getBalance());
         amirahTeensAccount.withdraw(2000);
-        assertEquals(1000, amirahTeensAccount.getBalance());
+        assertEquals(2000, amirahTeensAccount.getBalance());
 
     }
 
