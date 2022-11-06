@@ -34,20 +34,10 @@ public class StudentGrade {
                 grade = in.nextInt();
                 grade++;
                 switch (grade / 10) {
-                    case 9:
-                    case 8:
-                        aCount++;
-                        break;
-                    case 5:
-                        cCount++;
-                        break;
-                    case 7:
-                    case 6:
-                        bCount++;
-                        break;
-                    default:
-                        dCount++;
-
+                    case 9, 8 -> aCount++;
+                    case 5 -> cCount++;
+                    case 7, 6 -> bCount++;
+                    default -> dCount++;
                 }
             }
         System.out.println("\n " +  " A : " + aCount + " Students" +

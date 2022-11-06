@@ -21,7 +21,7 @@ date of birth—then calculates and prints the person’s age in (years), maximu
 import java.time.LocalDate;
 
 
-public class HeartRateCalculate {
+public class    HeartRateCalculate {
 
     private String firstName;
      private String lastName;

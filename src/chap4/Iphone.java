@@ -12,8 +12,8 @@ public class Iphone {
         return colour;
     }
 
-    public  void setPrice(int price) {
-        this.price = price;
+    public static   void setPrice(int price) {
+        Iphone.price = price;
     }
 
     public static  double getPrice() {

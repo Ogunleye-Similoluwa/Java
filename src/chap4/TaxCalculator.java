@@ -8,7 +8,7 @@ a given year. Your program should input this information for each citizen,
 
 import java.util.Scanner;
 
-public class TaxCalculator {
+public class  TaxCalculator {
     public static void main(String[] args) {
 
 
