@@ -18,11 +18,12 @@ public class BinaryNumbers {
         System.out.print("Enter a binary number: ");
         int number = input.nextInt();
 
-        for (int counter = 0; number > 0; number /= 10) {
+        for (int counter = 0; number > 0;  counter++) {
             int r = number % 10;
             int decimal = r * (int) Math.pow(counter, 2);
             sum += decimal;
-            counter++;
+            number /= 10;
+
         }
 
         System.out.printf("%d converted to decimal is %d", number, sum);

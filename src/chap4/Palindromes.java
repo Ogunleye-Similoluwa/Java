@@ -11,13 +11,13 @@ public class Palindromes {
         int sum = 0;
         int temp;
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print("Enter a  number: ");
+//        for (int i = 1; i <= 5; i++) {
+//            System.out.print("Enter a  number: ");
             int number = in.nextInt();
             temp = number;
-            int length = String.valueOf(number).length();
-
-            if (length == 5) {
+//            int length = String.valueOf(number).length();
+//
+//            if (length == 5) {
                 for (int n = number; n > 0; n /= 10) {
                     int r = n % 10;
                     sum = (sum * 10) + r;
@@ -27,8 +27,8 @@ public class Palindromes {
                 } else {
                     System.out.println("The number is not a palindrome.");
                 }
-                break;
-            } else System.out.println("Enter a valid number!");
-        }
+//                break
+            //} else System.out.println("Enter a valid number!");
+       // }
     }
 }

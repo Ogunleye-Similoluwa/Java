@@ -21,17 +21,39 @@ import java.util.Scanner;
 public class Encryption {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int [] encrypt = new int[4];
 
-        System.out.println("The enter number to be encrypted");
-       int num = input.nextInt();
-//        int length = String.valueOf(num).length();
-//            int sum = 0;
-//        if (length == 4){
-//            for (int e = num; num > 0 ; num%=10){
-//                 sum= sum + num + 7;
-//            }
-//        }
+        int firstAdd=0;
+        int secondAdd=0;
+        int thirdAdd=0;
+        int fourthAdd=0;
+        int temp ;
+        int temp2 ;
 
-//        int [] en
+
+        for (int num = 0; num < encrypt.length; num++){
+
+            System.out.println("Enter number to be encrypted");
+           int en = input.nextInt();
+            firstAdd = (encrypt[en] +7) % 10 ;
+            secondAdd = (encrypt[en] +7) % 10 ;
+            thirdAdd = (encrypt[en] +7) % 10 ;
+            fourthAdd = (encrypt[en] +7) % 10 ;
+
+            temp = firstAdd;
+           firstAdd = thirdAdd;
+           thirdAdd = temp;
+
+           temp2 = secondAdd;
+           secondAdd = fourthAdd;
+           fourthAdd =temp2;
+
+
+        }
+        System.out.printf("%d,%d,%d,%d ",firstAdd,secondAdd,thirdAdd,fourthAdd);
+
+
+
+
     }
 }

@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 
-public class ArithmeticTest {
+/*public class ArithmeticTest {
     Arithmetic arithmetic;
     @BeforeEach
     public void startAllTestWith(){
@@ -37,3 +37,5 @@ public class ArithmeticTest {
         assertEquals(20,arithmetic.subtractSquares(6,4));
     }
 }
+
+ */
