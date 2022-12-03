@@ -21,7 +21,6 @@ import java.util.Scanner;
 public class Encryption {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int [] encrypt = new int[4];
 
         int firstAdd=0;
         int secondAdd=0;
@@ -29,31 +28,76 @@ public class Encryption {
         int fourthAdd=0;
         int temp ;
         int temp2 ;
+        int remainder ;
 
+        System.out.println("Enter number to be encrypted");
+        int en = input.nextInt();
+        int length = String.valueOf(en).length();
+        if (length == 4) {
+                remainder = en % 10;
+                fourthAdd = remainder + 7;
+                fourthAdd = fourthAdd % 10;
+                en = en / 10;
+                remainder = en % 10;
+                thirdAdd =  remainder + 7;
+                thirdAdd = thirdAdd % 10;
+                en = en / 10;
+                remainder = en % 10;
+                secondAdd =  remainder + 7;
+                secondAdd = secondAdd % 10;
+                en = en / 10;
+                remainder = en % 10;
+                firstAdd = remainder + 7;
+                firstAdd = firstAdd % 10;
+                en = en / 10;
 
-        for (int num = 0; num < encrypt.length; num++){
+                temp = firstAdd;
+                firstAdd = thirdAdd;
+                thirdAdd = temp;
 
-            System.out.println("Enter number to be encrypted");
-           int en = input.nextInt();
-            firstAdd = (encrypt[en] +7) % 10 ;
-            secondAdd = (encrypt[en] +7) % 10 ;
-            thirdAdd = (encrypt[en] +7) % 10 ;
-            fourthAdd = (encrypt[en] +7) % 10 ;
-
-            temp = firstAdd;
-           firstAdd = thirdAdd;
-           thirdAdd = temp;
-
-           temp2 = secondAdd;
-           secondAdd = fourthAdd;
-           fourthAdd =temp2;
-
+                temp2 = secondAdd;
+                secondAdd = fourthAdd;
+                fourthAdd = temp2;
 
         }
-        System.out.printf("%d,%d,%d,%d ",firstAdd,secondAdd,thirdAdd,fourthAdd);
+        else {
+            System.out.println("Length if number is greater than 4");
+        }
+        System.out.printf(" Encrypted number :%d,%d,%d,%d ", firstAdd, secondAdd, thirdAdd, fourthAdd);
+
+        System.out.println("Decryption");
+        System.out.println("Enter number to be encrypted");
+        int de = input.nextInt();
+            de = de % 10;
+            remainder = de / 10;
+            fourthAdd = remainder % 10;
+            if (fourthAdd + 10 > 16) {
+                fourthAdd += 10;
+                fourthAdd = fourthAdd / 10;
+            }
+            remainder = de / 10;
+            thirdAdd =  remainder % 10;
+        if (thirdAdd + 10 > 16) {
+            thirdAdd += 10;
+            thirdAdd = thirdAdd / 10;
+        }
+            de = de / 10;
+            remainder = de % 10;
+            secondAdd =  remainder % 10;
+            de = de / 10;
+            remainder = de % 10;
+            firstAdd = remainder + 7;
+            de = de / 10;
+
+            temp = firstAdd;
+            firstAdd = thirdAdd;
+            thirdAdd = temp;
+
+            temp2 = secondAdd;
+            secondAdd = fourthAdd;
+            fourthAdd = temp2;
+
+        }
 
 
-
-
-    }
 }
