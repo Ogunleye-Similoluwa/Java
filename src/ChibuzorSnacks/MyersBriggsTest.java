@@ -261,7 +261,7 @@ public class MyersBriggsTest {
                     bCount2++;
                     cList.add(q22);
 
-                }
+                    }
                 counter3++;
             }
             out.print("A " + " regulated, structured   ");

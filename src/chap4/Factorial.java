@@ -12,9 +12,14 @@ public class Factorial {
 
         for ( int count  = 1 ; count <= num  ; count++){
             factorial = factorial * count ;
-        }
-        System.out.printf("""
+
+            System.out.printf("""
                 The factorial  of %d is : %d
                 """, num,factorial);
-    }
+        }
+        }
+//        System.out.printf("""
+//                The factorial  of %d is : %d
+//                """, num,factorial);
+//    }
 }

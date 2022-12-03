@@ -15,7 +15,7 @@ Item Value
 
 import java.util.Scanner;
 
-public class saleCommissionCalculator {
+public class SaleCommissionCalculator {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         double item = 0;
@@ -24,17 +24,18 @@ public class saleCommissionCalculator {
         double total = 0;
 
 
-        while (item !=-1){
+        while (item !=-1) {
             System.out.println("\nEnter amount of item sold");
-             item = in.nextDouble();
-             if (item == -1){
-                 break;
-             }
-            total =( 0.09 * item) + commission;
+            item = in.nextDouble();
+            if (item == -1) {
+                break;
+            }
+            total = (0.09 * item) + commission;
             counter++;
+        }
             System.out.printf("%n%s%15s "," salesPerson"," earning");
             System.out.printf("%n%d               $%.2f",counter,total);
-        }
+
 
 
     }
