@@ -28,6 +28,7 @@ public class CreditLimitCalculator {
 
             int item = 1;
             int total = 0;
+            int total1= 0;
             ;
             while (item != -1){
                 System.out.println("enter amount  of item purchased");
