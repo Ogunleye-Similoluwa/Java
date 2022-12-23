@@ -18,13 +18,7 @@ public class Duck {
     public Flyable getFlyable() {
         return flyable;
     }
-<<<<<<< HEAD
-    public Quackable getQuackAble() {
-=======
-    public Quackable getQuackable() {
->>>>>>> 07432dbba251b49dfbc4f514276cfad4a95c3024
-        return quackable;
-    }
+
 
     public void setFlyable(Flyable flyable) {
         this.flyable = flyable;
