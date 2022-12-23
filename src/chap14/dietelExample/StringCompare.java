@@ -26,6 +26,6 @@ public class StringCompare {
         else{
             System.out.printf("Not equals case ignored ");
         }
-
+        System.out.println("s1 compared to s2 is" + s1.compareTo(s2));
     }
 }
