@@ -5,7 +5,7 @@ public class StringCompare {
         String s1 = new String("Hello");
         String s2 = "Goodbye";
         String s3 = "Happy Birthday";
-        String s4 = "Happy Birthday";
+        String s4 = "happy Birthday";
 
         System.out.println(s1+ "\n" +  s2 +"\n"+  s3+"\n" + s4);
         if (s1.equals("Hello")){
