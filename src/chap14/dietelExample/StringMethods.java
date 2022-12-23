@@ -2,7 +2,7 @@ package chap14.dietelExample;
 
 public class StringMethods {
     public static void main(String[] args) {
-        String s1 = "Hello there";
+        String s1 = "Hello simex";
         char[] charArray = new char[5];
         System.out.println(s1);
         System.out.println(s1.length());
@@ -10,7 +10,7 @@ public class StringMethods {
             System.out.print(s1.charAt(i) + " ");
         }
         s1.getChars(0,5,charArray,0 );
-        System.out.println( );
+        System.out.println();
         for (char character:charArray) {
             System.out.print(character);
         }
