@@ -10,7 +10,13 @@ public class RationalNumberTest {
     public void testRational() {
         RationalNumbers numbers = new RationalNumbers(4,8);
         numbers.getRational();
-        assertEquals(1, numbers.getNumerator());
-        assertEquals(2,numbers.getDenominator());
+        assertEquals(2, numbers.getNumerator());
+        assertEquals(4,numbers.getDenominator());
+
+    }
+    @Test
+    public void addRationalNumbersTest(){
+        RationalNumbers numbers = new RationalNumbers();
+        assertEquals(3, numbers.addRational(2,4));
     }
 }
