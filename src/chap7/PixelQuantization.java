@@ -18,6 +18,7 @@ Print the array with the new, quantized values*/
 
 
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class PixelQuantization {
@@ -37,9 +38,9 @@ public class PixelQuantization {
 //
         int [] arr = {10,12,14,16,23,54,65,34,34,56,4523,54,12,46,213,67,456,586,34,865};
         int [] newArray = pixel(arr);
-        for (int i :newArray) {
-            System.out.println(i);
-        }
+       // for (int i :newArray) {
+        System.out.println( Arrays.toString(newArray));
+        //}
 
    }
    public static int [] pixel(int []  array){
