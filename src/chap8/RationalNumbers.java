@@ -1,8 +1,8 @@
 package chap8;
 
 public class RationalNumbers {
-    private int numerator;
-    private int denominator;
+    private static int numerator;
+    private static int denominator;
     public RationalNumbers(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
@@ -20,29 +20,45 @@ public class RationalNumbers {
     }
 
 
-    public  void getRational(int numerator, int denominator){
+    public static void getRational(int numerator, int denominator){
         double rem = (double) numerator / denominator;
-        this.numerator = (int) (rem * numerator);
-        this.denominator = (int) (rem * denominator);
+      RationalNumbers.numerator = (int) (rem * numerator);
+        RationalNumbers.denominator = (int) (rem * denominator);
     }
-    public  void getRational(){
+    public static void getRational(){
         double rem = (double) numerator / denominator;
-        this.numerator = (int) (rem * numerator);
-        this.denominator = (int) (rem * denominator);
+        numerator = (int) (rem * numerator);
+        denominator = (int) (rem * denominator);
     }
     public static  double div(double num1, double num2) {
         return num1/num2;
     }
-    public  double addRational(double num1, double num2){
+    public static double addRational(double num1, double num2){
         getRational((int) num1, (int) num2);
-        return this.numerator + this.denominator;
+        return numerator + denominator;
     }
+    public static  double subtractRational(double num1, double num2){
+        getRational((int) num1, (int) num2);
+        return numerator - denominator;
+    }
+    public static double multiplyRational(double num1, double num2){
+        getRational((int) num1, (int) num2);
+        return numerator * denominator;
+    }
+    public static double divideRational(double num1, double num2){
+        getRational((int) num1, (int) num2);
+        double rem = (double) numerator / denominator;
+        numerator = (int) (rem * numerator);
+        denominator = (int) (rem * denominator);
+        return (double) numerator / denominator;
+    }
+
 
     public static void main(String[] args) {
     double num = 2.0/4.0;
         System.out.println(num);
         RationalNumbers no = new RationalNumbers();
-        no.getRational(2,4);
+        getRational(2,4);
         System.out.println(no.getNumerator());
         System.out.println(no.getDenominator());
     }

@@ -16,7 +16,20 @@ public class RationalNumberTest {
     }
     @Test
     public void addRationalNumbersTest(){
-        RationalNumbers numbers = new RationalNumbers();
-        assertEquals(3, numbers.addRational(2,4));
+        assertEquals(3, RationalNumbers.addRational(2,4));
+    }
+    @Test
+    public void subtractRationalNumbersTest(){
+        assertEquals(-1, RationalNumbers.subtractRational(2,4));
+    }
+    @Test
+    public void divideRationalNumbersTest(){
+
+        assertEquals(2, RationalNumbers.multiplyRational(2,4));
+    }
+    @Test
+    public void divideRational(){
+
+        assertEquals(0.5, RationalNumbers.divideRational(4,8));
     }
 }
