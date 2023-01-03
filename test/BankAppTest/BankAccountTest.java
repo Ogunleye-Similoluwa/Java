@@ -18,5 +18,8 @@ public class BankAccountTest {
      catch (IllegalArgumentException e) {
          System.out.println(e.getMessage());
      }
+     BankAccount se = me.findAccount(1234);
+    // assertEquals(100, me.getBalance());
+     me.findAccount(1234);
     }
 }

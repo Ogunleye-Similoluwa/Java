@@ -2,26 +2,30 @@ package ChibuzorSnacks.BankApp;
 
 public class BankAccount {
     private String firstName;
-    private double balance = 0;
+    private String lastName;
+    private double balance ;
 
     private  int accountNumber;
-
-    public int getAccountNumber() {
-        return accountNumber;
+    private User user;
+    public BankAccount(String firstName, String lastName, int  accountNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.accountNumber = accountNumber;
     }
+
 
     public double getBalance() {
         return balance;
     }
-    public double deposit(double amount){
+    public void deposit(double amount){
         validateDeposit(amount);
         balance += amount;
-        return balance;
+
     }
-    public double withDraw(double amount){
+    public void withDraw(double amount){
         validateWithDraw(amount);
         balance -= amount;
-        return  balance;
+
     }
     private void  validateWithDraw(double amount){
         if(amount > balance){
@@ -38,10 +42,10 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return "BankAccount" +
-                "firstName='" + firstName + '\'' +
-                " Balance=" + balance +
-                "AccountNumber=" + accountNumber +
-                "";
+        return String.format("""
+                FirstName-%s
+                Balance-%f
+                AccountNumber-%d
+                """,firstName,balance,accountNumber);
     }
 }
