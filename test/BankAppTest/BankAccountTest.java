@@ -8,18 +8,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankAccountTest {
     @Test
-    public void userHasABankAccount(){
+    public void userHasABankAccount() throws Exception {
         User me = new User("Simi","ogunleye",1234);
-        assertEquals(120,me.deposit(120));
-        assertEquals( 100,me.withDraw(20));
+        me.deposit(120);
+        assertEquals(120,me.getBalance());
+        me.withDraw(20);
+        assertEquals( 100,me.getBalance());
      try {
         me.deposit(-120);
      }
      catch (IllegalArgumentException e) {
          System.out.println(e.getMessage());
      }
-     BankAccount se = me.findAccount(1234);
-    // assertEquals(100, me.getBalance());
-     me.findAccount(1234);
+
+
     }
 }

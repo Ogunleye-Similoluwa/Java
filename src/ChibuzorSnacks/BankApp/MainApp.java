@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class MainApp {
     private static User user;
-    static BankAccount account ;
+
     public static void main(String[] args) {
         String bank = """
                 =============================
@@ -20,7 +20,7 @@ public class MainApp {
         String lastName= input("Enter your lastName: ");
         int accountNumber = Integer.parseInt(input("Enter your account number"));
        user = new User(firstName, lastName, accountNumber);
-        account = new BankAccount(firstName, lastName, accountNumber);
+
         entry();
 
     }
@@ -47,6 +47,7 @@ public class MainApp {
     }
 
     private static void viewAccount() {
+        BankAccount account  = user.viewAccount();
         print(String.valueOf(account));
         entry();
     }
@@ -54,12 +55,12 @@ public class MainApp {
     private static void withdraw() {
         try {
             double withDraw = Double.parseDouble(input("Enter amount to be deposited"));
-            user.deposit(withDraw);
+            user.withDraw(withDraw);
             String result ="Successfully WithDrawed";
             print(result);
             entry();
         }
-        catch (IllegalArgumentException e){
+        catch (Exception e){
             print(e.getMessage());
             entry();
         }
@@ -73,7 +74,7 @@ public class MainApp {
             print(result);
             entry();
         }
-        catch (IllegalArgumentException e){
+        catch (Exception e){
             print(e.getMessage());
             entry();
         }
