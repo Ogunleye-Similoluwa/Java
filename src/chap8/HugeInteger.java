@@ -4,41 +4,38 @@ package chap8;
 import java.util.Arrays;
 
 public class HugeInteger {
-    private static int[] huges= new int[3];
+    private static int[] huges= new int[10];
 
-    public static int parse(String number) {
-      int []  huge = new int[3];
+    public static void parse(String number) {
         int length= String.valueOf(number).length();
-        int j = 0;
-        if(length  ==huge.length){
-        for (int i = 0; i < huge.length; i++) {
-            huge[0] = 1;
-            huge[i] = number.charAt(i);
-            System.out.println(huge[i]);
-            System.out.println(number.charAt(i));
-            System.out.println(Arrays.toString(huge));
+        String [] temp = number.split("");
+        if(length  <= huges.length){
+        for (int i = 0; i < huges.length; i++) {
+            huges[i] = Integer.parseInt(temp[i]);
         }
-
-//        for (int k : huge) {
-//            j = (j * 10) + k;
-//        }
-//        return j;
     }
-
-        return 0;
     }
 
     public static int print() {
-        int [] newArray = {1,2,3};
         int j = 0;
-        for (int k : newArray) {
+        for (int k : huges) {
             j = (j * 10) + k;
         }
         return j;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < huges.length; i++) {
+            s.append(huges[i]);
+        }
+        return s.toString();
+    }
+
     public static void main(String[] args) {
-        System.out.println(HugeInteger.parse("123"));
+        HugeInteger.parse("1224345345");
         System.out.println(HugeInteger.print());
+        System.out.println();
     }
 }
